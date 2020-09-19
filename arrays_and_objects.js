@@ -60,6 +60,7 @@ for(let rateItem in rates)      // looping over an object
     {
         highestExchangeRate = currencyDenomination;
         currencySymbol = rateItem;
+
     }
 }
 console.log("\nHighest exchange rate is " +
