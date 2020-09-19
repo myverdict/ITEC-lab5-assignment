@@ -52,14 +52,14 @@ console.log("\n100 Euros in Australian Dollars is " + euroToAustralianDollar.toF
 //    In other words, identify the property with the largest value. the answer is BRL (Brazilian Real) at 3.8959 BRL to 1 Euro.
 let highestExchangeRate = 0;
 let currencySymbol = "";
-for(let rateItem in rates)
+for(let rateItem in rates)      // looping over an object
 {
     let currencyDenomination = rates[rateItem];
 
     if(highestExchangeRate < currencyDenomination)
     {
         highestExchangeRate = currencyDenomination;
-        currencySymbol = rateItem.valueOf();
+        currencySymbol = rateItem;
     }
 }
 console.log("\nHighest exchange rate is " +
