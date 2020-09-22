@@ -25,7 +25,7 @@ console.log("\nThe Latitude is: " + northSouthLatitudeMeasurement);
 
 // TODO Extract the longitude value, and log it to the console.
 let westEastLongitudeMeasurement = iss_location.iss_position.longitude;
-console.log("The Longitude is: " + westEastLongitudeMeasurement + "\n");
+console.log("The Longitude is: " + westEastLongitudeMeasurement);
 
 /*
     b. Use this JavaScript object of exchange rates relative to Euros.
@@ -48,8 +48,9 @@ rates.CHF = 1.1787;
 // rates.currency does not exist
 // console.log(rates[currency]);
 
+console.log("\nList of objects with new value: ")
 console.log(rates);
-console.log("Swiss Francs: " + rates.CHF);
+console.log("Swiss Francs relative to Euros: " + rates.CHF);
 
 // TODO if you had 100 Euros, write code to get the exchange rate from the object, then calculate
 //      the equivalent value in Australian Dollars (AUD)
@@ -81,7 +82,8 @@ for(let currencyType in rates)
     numOfCurrencyTypes++;
     console.log(currencyType, rates[currencyType]);
 }
-console.log("The number of currency types in the list is: " + numOfCurrencyTypes);
+
+console.log("\nThe number of currency types in the list is: " + numOfCurrencyTypes);
 
 /*
     c. Use this JavaScript array of objects of cat owners, and their cats. Source, moderncat.com
@@ -94,15 +96,16 @@ let cats_and_owners = [
 ];
 
 // TODO print Gary Oldman's cat's name
-console.log("\nGary Oldman's cat's name is: " + cats_and_owners[1].cat + "\n");
+console.log("\nGary Oldman's cat's name is: " + cats_and_owners[1].cat);
 
 // TODO Taylor Swift's cat is called 'Meredith'. Write code to add this data to the array.
 let taylorObject = { name: "Taylor Swift", cat: "Meredith" };       // Create a new object
 cats_and_owners.push(taylorObject);                                 // Add the object to the array
+console.log("\nArray of objects with new value: ")
 console.log(cats_and_owners);
 
 // TODO write a loop to print each cat owner, and their cat's name, one per line. Use the forEach style.
-console.log("\nPrinting each cat and it's owner.\n");
+console.log("\nPrinting each cat and it's owner.");
 cats_and_owners.forEach(function(catAndOwner)
 {
     console.log(catAndOwner.name + ", " + catAndOwner.cat);
