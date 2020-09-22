@@ -148,7 +148,7 @@
                 errors.push("Not a Minnesota zipcode.");
             }
 
-            if(!treeType)                                               // 6. Tree type select check
+            if(!treeType)                                       // 6. Tree type select check
             {
                 errors.push("Please select a tree type.");
             }
@@ -159,8 +159,7 @@
             if(errors.length > 0)
             {
                 let errorMessage = errors.join("\n");
-                alert(errorMessage);                                    // Display the error message
-                return;                                                 // Stop prcessing
+                alert(errorMessage);                            // Display the error message
             }
             // TODO - If there are no errors, use a template string to display an order summary in the order summary paragraph
             else

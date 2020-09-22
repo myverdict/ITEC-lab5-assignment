@@ -21,6 +21,7 @@ let iss_location = {
 // TODO Extract the latitude value, and log it to the console.
 let northSouthLatitudeMeasurement = iss_location.iss_position.latitude;
 console.log("\nThe Latitude is: " + northSouthLatitudeMeasurement);
+// console.log(iss_location["message"]);
 
 // TODO Extract the longitude value, and log it to the console.
 let westEastLongitudeMeasurement = iss_location.iss_position.longitude;
@@ -40,6 +41,13 @@ let rates = {
 
 // TODO write code to add a new property for Swiss Francs. Symbol is CHF, value is 1.1787.
 rates.CHF = 1.1787;
+// rates["CHF"] = 1.1787;		// Another way of writing the same thing
+
+// More examples:
+// let currency = "CAD";
+// rates.currency does not exist
+// console.log(rates[currency]);
+
 console.log(rates);
 console.log("Swiss Francs: " + rates.CHF);
 
@@ -240,6 +248,11 @@ nobel_prize_winners_2017.prizes.forEach(function(eachPrizeCategory)
     }
 })
 
+/* // Another way to the above code
+let literatureNobelLaureate = nobel_prize_winners_2017.prizes[3].laureates[0];
+console.log(literatureNobelLaureate.firstname, literatureNobelLaureate.surname);        // Kazuo Ishiguro
+*/
+
 // TODO print the ids of each of the Physics Nobel laureates. Your code should still work without modification if a laureate was added, or removed.
 nobel_prize_winners_2017.prizes.forEach(function(eachPrizeCategory)
 {
@@ -273,10 +286,15 @@ console.log("\nTotal number of prize categories: " + totaLCategoryNum);
 let nobelLaureateWinnersCount = 0;
 nobel_prize_winners_2017.prizes.forEach(function(eachPrize)
 {
+    nobelLaureateWinnersCount += eachPrize.laureates.length;
+
+    /*
+    // Another way of writing the above code
     eachPrize.laureates.forEach(function()
     {
         nobelLaureateWinnersCount++;
     })
+    */
 })
 console.log("\nTotal number of laureates from 2017 are " + nobelLaureateWinnersCount);
 
