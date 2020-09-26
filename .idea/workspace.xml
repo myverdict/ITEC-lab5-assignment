@@ -1,14 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a5b0538e-5245-4aa3-a51b-9b134b6843d9" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/lab5-assignment.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/arrays_and_objects.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tree.html" beforeDir="false" />
-    </list>
+    <list default="true" id="a5b0538e-5245-4aa3-a51b-9b134b6843d9" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -44,6 +37,7 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -57,7 +51,7 @@
       <workItem from="1600904595197" duration="9889000" />
       <workItem from="1601043706240" duration="2361000" />
       <workItem from="1601059462623" duration="20000" />
-      <workItem from="1601134706096" duration="7266000" />
+      <workItem from="1601134706096" duration="7571000" />
     </task>
     <servers />
   </component>
