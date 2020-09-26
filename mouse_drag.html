@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Mouse Events</title>
+    <style>
+        #canvas
+        {
+            border: 1px black solid;
+        }
+    </style>
+</head>
+
+<body>
+    <P>Drag the mouse on the canvas</P>
+    <canvas id="canvas" height="400" width="400"></canvas>          <!-- Canvas to draw on -->
+
+    <br><br>
+
+    <label for="color">Select a color: </label>                     <!-- Color picker -->
+    <input id="color" type="color">
+
+    <br><br>
+
+    <label for="range">Select the circle size: </label>             <!-- Circle size -->
+    <input id="range" type="range">
+
+    <br><br>
+
+    <button id="clear-button">Clear</button>                        <!-- Button to clear the canvas -->
+
+    <script>
+        let canvas = document.querySelector('#canvas')              // Get the canvas id & store in a variable
+        let context = canvas.getContext('2d')                       // Create a drawing context
+
+        // Get the ids for the color input & range input
+        let colorSelected = document.querySelector("#color");       // for color
+        let rangeSelected = document.querySelector("#range");       // to set the radius of the circle
+
+        // Get the id for the clear button
+        let clearButton = document.querySelector("#clear-button");  // for clearing the canvas
+
+        // Keep track of whether the mouse button has been pressed down or not.
+        // Think of this as whether the user is drawing or not, is their brush on the canvas?
+        let mousedown = false
+
+        canvas.addEventListener('mousedown', function()
+        {
+            mousedown = true
+        })
+
+        canvas.addEventListener('mouseup', function()
+        {
+            mousedown = false
+        })
+
+        // If mouse leaves the canvas then stop drawing
+        canvas.addEventListener('mouseout', function()
+        {
+            mousedown = false
+        })
+
+        canvas.addEventListener('mousemove', function(event)
+        {
+            context.beginPath();            // Create a path for the circle to be drawn
+
+            // Get the actual color and range values selected from the input boxes
+            let color = colorSelected.value;
+            let circleRadius = rangeSelected.value;
+
+            // If the mouse button is not pressed down, do not draw.
+            if(!mousedown)
+            {
+                return;
+            }
+
+            // event is a built-in variable, contains the event that triggered this function
+            // get the x, y location of the event
+            let x = event.offsetX
+            let y = event.offsetY           // offsetX, offsetY, may not work in older browsers
+
+            // Set the circle arc
+            context.arc(x, y, circleRadius, 0, 6.3);
+            context.moveTo(x, y);           // This helps for the color to stay inside the circle when dragging
+
+            // Set the circle fill color & fill the circle with that color
+            context.fillStyle = color;
+            context.fill();
+
+            // Set the width of the circle outline and set the color of the circle outline
+            context.lineWidth = 2;
+            context.strokeStyle = color;
+
+            // Draw the circle
+            context.stroke();
+        })
+
+        clearButton.addEventListener("click", function ()
+        {
+            // clear the canvas
+            context.clearRect(0, 0, canvas.width, canvas.height);
+        })
+    </script>
+</body>
+
+</html>
+
+<!--
+    Why is an outline being drawn on my canvas, when I haven't set the outline color?
+-->
+
